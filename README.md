@@ -15,8 +15,13 @@ In this case, you have to specify some environment variables before running `cat
 
 First checkout this repository into some `src` folder of a catkin workspace.
 Then just build the common execuatbles (which also include a  application) via:
-
-   catkin_make
+    create workspace  `mkdir test_ws` 
+    cd test_ws
+    mkdir src
+    cd src
+    git clone git@github.com:iravi89/ros_test_repo.git
+    cd ../
+    catkin_make
 
 Catkin now builds `rostalker`, `roslistener`, and `simple_test`.
 `simple_test` is just a gtest example w/o any catkin magic (c.f. CMakeLists.txt).
