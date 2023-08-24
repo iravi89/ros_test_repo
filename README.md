@@ -15,6 +15,7 @@ In this case, you have to specify some environment variables before running `cat
 
 First checkout this repository into some `src` folder of a catkin workspace.
 Then just build the common execuatbles (which also include a  application) via:
+
     create workspace  `mkdir test_ws` 
     cd test_ws
     mkdir src
