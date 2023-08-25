@@ -19,3 +19,20 @@ jobs:
       run: cd build && make
     - name: Run Test
       run: /home/runner/work/github_actions_gtest_example/github_actions_gtest_example/build/test/github_actions_gtest_example.test
+    - name: ssh-pipeline
+      uses: cross-the-world/ssh-pipeline@v1.2.0
+    - name: Setup SSH
+      uses: kielabokkie/ssh-key-and-known-hosts-action@v1.3.5
+    - name: SSH Command
+      uses: D3rHase/ssh-command-action@v0.2.2
+    - name: setup ssh
+      uses: D3rHase/ssh-command-action@{version}
+      with:
+        host: ${{secrets.HOST}} # Remote server address / ip - required
+        port: ${{secrets.PORT}} # Remote server port -  Default: 22 - optional
+        user: ${{secrets.USER}} # Remote server user - required
+        private_key: ${{secrets.PRIVATE_KEY}} # Private ssh key registered on the remote server - required
+        host_fingerprint: ${{secrets.HOST_FINGERPRINT}} # Public ssh key fingerprint, viewable via ssh-keyscan -H $HOST -p $PORT - optional
+        command: echo 'hello world' # Command to be executed - Default: echo 'hello world' - optional
+            
+            
