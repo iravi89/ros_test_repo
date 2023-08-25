@@ -16,7 +16,13 @@ In this case, you have to specify some environment variables before running `cat
 First checkout this repository into some `src` folder of a catkin workspace.
 Then just build the common execuatbles (which also include a  application) via:
 
-   catkin_make
+    create workspace  `mkdir test_ws` 
+    cd test_ws
+    mkdir src
+    cd src
+    git clone git@github.com:iravi89/ros_test_repo.git
+    cd ../
+    catkin_make
 
 Catkin now builds `rostalker`, `roslistener`, and `simple_test`.
 `simple_test` is just a gtest example w/o any catkin magic (c.f. CMakeLists.txt).
@@ -42,4 +48,17 @@ If one has to install the gtest libraries in some other folder (e.g. into `~/lib
 
 `LIBRARY_PATH` tells the linker where to find the libraries, while `GTEST_ROOT` gives cmake the location hints for it's checks.
 
+## To Do
+
+    1.  Create Docker image
+    2. Integrate CI/CD pipeline
+    3. Build code and run gtest
+    4. send report of gtest over mail to user
+    5. validation link send to user verify build over email
+    6. On validation, deploy the build to remote server
+    7. Send success/failure report to user after deployment.
+
+
+    
+    
 
