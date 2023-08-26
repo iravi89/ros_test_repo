@@ -57,8 +57,3 @@ If one has to install the gtest libraries in some other folder (e.g. into `~/lib
     5. validation link send to user verify build over email
     6. On validation, deploy the build to remote server
     7. Send success/failure report to user after deployment.
-
-
-    
-    
-
