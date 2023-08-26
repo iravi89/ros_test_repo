@@ -44,6 +44,6 @@ jobs:
         with:
           context: .
           push: true
-          target: builder
+          target: build
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
