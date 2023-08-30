@@ -11,8 +11,6 @@ env:
   IMAGE_NAME: ${{ github.repository }}
   CONTAINER_NAME: ros-test
 
-
-
 jobs:
   build:
     runs-on: ubuntu-latest
