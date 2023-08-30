@@ -2,9 +2,9 @@ name: The Continous Integration and Selective Deployment
 
 on:
   push:
-    branches: [ ci ]
+    branches: [ main ]
   pull_request:
-    branches: [ ci ]
+    branches: [ main ]
 
 env:
   REGISTRY: ghcr.io
