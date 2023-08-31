@@ -1,3 +1,4 @@
+[![Test Coverage](https://github.com/KR-Ravindra/ros_test_repo/actions/workflows/cicd.yml/badge.svg)](https://github.com/KR-Ravindra/ros_test_repo/actions/workflows/cicd.yml)
 # ros_test_repo
 ## Build gtest
 
