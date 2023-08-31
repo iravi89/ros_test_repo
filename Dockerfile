@@ -12,6 +12,7 @@ COPY . test_ws/src/
 RUN /bin/bash -c '. /opt/ros/noetic/setup.bash && catkin_make'
 
 FROM build as test
+WORKDIR /test_ws/test_ws/
 RUN /bin/bash -c '. /opt/ros/noetic/setup.bash && catkin_make tests'
-RUN ls devel/lib/gtest_ros_example/
-RUN . /test_ws/test_ws/devel/lib/gtest_ros_example/talker-test
+RUN ls /test_ws/test_ws/devel/lib/gtest_ros_example
+RUN /bin/bash -c '. /opt/ros/noetic/setup.bash && roscore & sleep 5 && . /opt/ros/noetic/setup.bash && devel/lib/gtest_ros_example/talker-test'
