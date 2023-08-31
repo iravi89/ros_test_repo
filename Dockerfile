@@ -13,4 +13,5 @@ RUN /bin/bash -c '. /opt/ros/noetic/setup.bash && catkin_make'
 
 FROM build as test
 RUN /bin/bash -c '. /opt/ros/noetic/setup.bash && catkin_make tests'
+RUN /bin/bash -c 'ls /test_ws/test_ws/devel/lib/gtest_ros_example/'
 RUN /bin/bash -c '. /test_ws/test_ws/devel/lib/gtest_ros_example/talker-test'
