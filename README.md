@@ -1,5 +1,4 @@
-[![Build Status](https://github.com/KR-Ravindra/ros_test_repo/actions/workflows/cicd.yml/badge.svg)](https://github.com/KR-Ravindra/ros_test_repo/actions/workflows/cicd.yml)
-
+[![The Continous Integration and Selective Deployment](https://github.com/KR-Ravindra/ros_test_repo/actions/workflows/cicd.yml/badge.svg)](https://github.com/KR-Ravindra/ros_test_repo/actions/workflows/cicd.yml)
 # ros_test_repo
 ## Build gtest
 
