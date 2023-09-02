@@ -13,7 +13,7 @@ TEST(NumberCmpTest, ShouldPass){
     ASSERT_EQ(3, add(1,2));
 }
 
-TEST(NumberCmpTest, ShouldPass){
+TEST(NumberCmpTest2, ShouldPass){
     std::cout<<"RUNNING TEST CASES...2"<<std::endl;
     ASSERT_EQ(4, add(3, 1));
 }
