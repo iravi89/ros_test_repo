@@ -4,7 +4,7 @@
 // bad function:
 // for example: how to deal with overflow?
 int add(int a, int b){
-    return a + b;
+    return a + b + 10;
 }
 
 TEST(NumberCmpTest, ShouldPass){
@@ -13,6 +13,10 @@ TEST(NumberCmpTest, ShouldPass){
 
 TEST(NumberCmpTest, ShouldFail){
     ASSERT_EQ(INT_MAX, add(INT_MAX, 1));
+}
+
+TEST(NumberCmpTest, ShouldFail){
+    ASSERT_EQ(3, add(1, 1));
 }
 
 int main(int argc, char **argv) {
