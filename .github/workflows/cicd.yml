@@ -2,9 +2,7 @@ name: The Continous Integration and Selective Deployment
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches: [ feature-1 ]
   workflow_dispatch:
 
 env:
@@ -37,6 +35,6 @@ jobs:
         with:
           context: .
           push: true
-          target: build
+          target: test
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}

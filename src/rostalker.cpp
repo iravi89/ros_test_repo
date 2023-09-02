@@ -8,6 +8,7 @@ void RosTalker::talk(){
     msg_pub.publish(msg);
 }
 
+
 int main(int argc, char **argv){
     ros::init(argc, argv, "rosTalker");
     RosTalker rt;
