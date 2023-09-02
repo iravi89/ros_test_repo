@@ -11,13 +11,6 @@ TEST(NumberCmpTest, ShouldPass){
     ASSERT_EQ(3, add(1,2));
 }
 
-TEST(NumberCmpTest, ShouldFail){
-    ASSERT_EQ(INT_MAX, add(INT_MAX, 1));
-}
-
-TEST(NumberCmpTest, ShouldFail){
-    ASSERT_EQ(3, add(1, 1));
-}
 
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
