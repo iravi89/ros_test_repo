@@ -8,13 +8,12 @@ RUN mkdir /tmp/gtest_build && cd /tmp/gtest_build && \
 FROM base as prep
 RUN mkdir -p test_ws/src
 WORKDIR test_ws/
-COPY . test_ws/src/
+COPY . /test_ws/src/
 
 FROM prep as build
 RUN /bin/bash -c '. /opt/ros/noetic/setup.bash && catkin_make'
+CMD /bin/bash -c '. /opt/ros/noetic/setup.bash && roscore & sleep 1 && devel/lib/gtest_ros_example/rostalker & sleep 1 && devel/lib/gtest_ros_example/roslistener'
 
 FROM prep as test
-WORKDIR /test_ws/test_ws/
 RUN /bin/bash -c '. /opt/ros/noetic/setup.bash && catkin_make tests'
-RUN ls /test_ws/test_ws/devel/lib/gtest_ros_example
-CMD /bin/bash -c '. /opt/ros/noetic/setup.bash && roscore & sleep 5 && . /opt/ros/noetic/setup.bash && devel/lib/gtest_ros_example/talker-test'
+RUN /bin/bash -c '. /opt/ros/noetic/setup.bash && roscore & sleep 1 && . /opt/ros/noetic/setup.bash && devel/lib/gtest_ros_example/talker-test'
