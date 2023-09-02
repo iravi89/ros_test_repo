@@ -5,7 +5,7 @@
 // bad function:
 // for example: how to deal with overflow?
 int add(int a, int b){
-    return a + b;
+    return a + b + 10;
 }
 
 TEST(NumberCmpTest, ShouldPass){
