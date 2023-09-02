@@ -8,7 +8,7 @@ int add(int a, int b){
 }
 
 TEST(NumberCmpTest, ShouldPass){
-    ASSERT_EQ(3, add(1,2));
+    ASSERT_EQ(13, add(1,2));
 }
 
 
