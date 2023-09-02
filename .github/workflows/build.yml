@@ -1,4 +1,4 @@
-name: The Continous Integration and Selective Deployment
+name: Containerize
 
 on:
   push:
