@@ -2,7 +2,7 @@ name: The Continous Integration and Selective Deployment
 
 on:
   push:
-    branches: [ main ]
+    branches: [ KR-Ravindra-patch-3 ]
   pull_request:
     branches: [ main ]
   workflow_dispatch:
