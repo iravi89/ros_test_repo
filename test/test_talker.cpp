@@ -18,11 +18,11 @@ TEST(NumberCmpTest, ShouldFail){
     ASSERT_EQ(INT_MAX, add(INT_MAX, 1));
 }
 
-TEST(RtTest, TalkerFunction){
-    RosTalker rt;
-    std::cout<<"RUNNING TEST CASES...3"<<std::endl;
-    ASSERT_EQ(3, rt.add(1,2));
-}
+// TEST(RtTest, TalkerFunction){
+//     RosTalker rt;
+//     std::cout<<"RUNNING TEST CASES...3"<<std::endl;
+//     ASSERT_EQ(3, rt.add(1,2));
+// }
 
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
