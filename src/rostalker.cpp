@@ -3,7 +3,7 @@
 void RosTalker::talk(){
     std_msgs::String msg;
     std::stringstream ss;
-    ss<<"hello world";
+    ss<<"hello world With new changes...";
     msg.data = ss.str();
     msg_pub.publish(msg);
 }
