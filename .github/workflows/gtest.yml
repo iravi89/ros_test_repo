@@ -1,8 +1,8 @@
-name: The Continous Integration and Selective Deployment
+name: Automated Tests
 
 on:
   push:
-    branches: [ main ]
+    branches: [ KR-Ravindra-patch-3 ]
   pull_request:
     branches: [ main ]
   workflow_dispatch:
@@ -36,7 +36,7 @@ jobs:
         uses: docker/build-push-action@v4.1.1
         with:
           context: .
-          push: true
+          push: false
           target: test
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
